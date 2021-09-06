@@ -6,7 +6,7 @@ import { rfqService } from '../services/RfqHelpService';
 
 export default function DrawerHelper() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
+  const btnRef = React.useRef<HTMLButtonElement>(null);
   const [headerText, setHeaderText] = useState<String | undefined>(undefined);
   const [text, setText] = useState<Array<TextDto>>([]);
 
