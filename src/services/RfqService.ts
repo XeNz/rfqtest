@@ -12,6 +12,8 @@ class RfqService {
             targetPrice: 3000
         };
 
+        let immutable = {...mutable};
+
         const locked = {
             rfqId: 2,
             bestQuotePrice: 4000,
@@ -35,7 +37,7 @@ class RfqService {
             }
         }
         const rfqs: Array<RfqDto> = [
-            mutable, locked
+            mutable, locked, immutable
 
         ]
         return rfqs;
